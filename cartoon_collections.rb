@@ -30,6 +30,12 @@ end
 def find_the_cheese(cheese)
   cheese_types = ["cheddar", "gouda", "camembert"]
   
+  cheese.collect do |item|
+    cheese_types.each do |type|
+      if item == type
+        return item
+    end
+  end
   
   return nil
 end
